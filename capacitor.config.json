@@ -1,0 +1,6 @@
+{
+  "appId": "com.vaggelis.reacttests",
+  "appName": "react-android",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}
