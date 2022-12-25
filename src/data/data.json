@@ -1,0 +1,672 @@
+[
+    {
+        "MeterDistance": 0.0,
+        "Height": 90.291267395019531,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 25.0,
+        "Height": 89.94366455078125,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 50.0,
+        "Height": 89.000198364257813,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 75.0,
+        "Height": 87.14892578125,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 100.0,
+        "Height": 86.6378402709961,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 125.0,
+        "Height": 86.011886596679688,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 150.0,
+        "Height": 85.744331359863281,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 175.0,
+        "Height": 85.108238220214844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 200.0,
+        "Height": 84.999771118164063,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 225.0,
+        "Height": 84.902130126953125,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 250.0,
+        "Height": 84.844856262207031,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 275.0,
+        "Height": 84.996955871582031,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 300.0,
+        "Height": 84.995834350585938,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 325.0,
+        "Height": 84.9946060180664,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 350.0,
+        "Height": 84.986557006835938,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 375.0,
+        "Height": 84.797286987304688,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 400.0,
+        "Height": 83.8907699584961,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 425.0,
+        "Height": 83.147476196289063,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 450.0,
+        "Height": 82.9489974975586,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 475.0,
+        "Height": 82.617401123046875,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 500.0,
+        "Height": 82.331451416015625,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 525.0,
+        "Height": 82.109725952148438,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 550.0,
+        "Height": 81.79376220703125,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 575.0,
+        "Height": 81.965194702148438,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 600.0,
+        "Height": 82.099014282226563,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 625.0,
+        "Height": 82.74755859375,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 650.0,
+        "Height": 83.859992980957031,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 675.0,
+        "Height": 85.681434631347656,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 700.0,
+        "Height": 89.188247680664063,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 725.0,
+        "Height": 93.0385513305664,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 750.0,
+        "Height": 94.881149291992188,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 775.0,
+        "Height": 96.201980590820313,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 800.0,
+        "Height": 97.106208801269531,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 825.0,
+        "Height": 97.728584289550781,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 850.0,
+        "Height": 98.30078125,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 875.0,
+        "Height": 99.225151062011719,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 900.0,
+        "Height": 100.76737213134766,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 925.0,
+        "Height": 104.46794128417969,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 950.0,
+        "Height": 107.76409149169922,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 975.0,
+        "Height": 107.54427337646484,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1000.0,
+        "Height": 106.90567779541016,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1025.0,
+        "Height": 106.18453979492188,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1050.0,
+        "Height": 105.78475952148438,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1075.0,
+        "Height": 105.01798248291016,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1100.0,
+        "Height": 105.19799041748047,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1125.0,
+        "Height": 105.84099578857422,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1150.0,
+        "Height": 112.76290893554688,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1175.0,
+        "Height": 118.14710998535156,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1200.0,
+        "Height": 122.52296447753906,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1225.0,
+        "Height": 127.00943756103516,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1250.0,
+        "Height": 130.31439208984375,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1275.0,
+        "Height": 134.34886169433594,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1300.0,
+        "Height": 135.96136474609375,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1325.0,
+        "Height": 138.72419738769531,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1350.0,
+        "Height": 140.57949829101563,
+        "IsVisible": true
+    },
+    {
+        "MeterDistance": 1375.0,
+        "Height": 140.3997802734375,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1400.0,
+        "Height": 139.83238220214844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1425.0,
+        "Height": 137.64256286621094,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1450.0,
+        "Height": 135.9862060546875,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1475.0,
+        "Height": 134.48678588867188,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1500.0,
+        "Height": 132.14508056640625,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1525.0,
+        "Height": 128.78933715820313,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1550.0,
+        "Height": 125.9849853515625,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1575.0,
+        "Height": 122.50292205810547,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1600.0,
+        "Height": 120.56626892089844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1625.0,
+        "Height": 119.48720550537109,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1650.0,
+        "Height": 120.40031433105469,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1675.0,
+        "Height": 121.12431335449219,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1700.0,
+        "Height": 122.78687286376953,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1725.0,
+        "Height": 122.86631774902344,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1750.0,
+        "Height": 122.76023864746094,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1775.0,
+        "Height": 124.66050720214844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1800.0,
+        "Height": 126.19924926757813,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1825.0,
+        "Height": 126.64564514160156,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1850.0,
+        "Height": 125.52390289306641,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1875.0,
+        "Height": 123.8721923828125,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1900.0,
+        "Height": 121.94194793701172,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1925.0,
+        "Height": 122.60234069824219,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1950.0,
+        "Height": 123.67020416259766,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 1975.0,
+        "Height": 123.16700744628906,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2000.0,
+        "Height": 123.1505126953125,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2025.0,
+        "Height": 120.44839477539063,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2050.0,
+        "Height": 114.86651611328125,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2075.0,
+        "Height": 107.05692291259766,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2100.0,
+        "Height": 102.19474029541016,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2125.0,
+        "Height": 98.277915954589844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2150.0,
+        "Height": 94.609870910644531,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2175.0,
+        "Height": 90.4961166381836,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2200.0,
+        "Height": 84.770103454589844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2225.0,
+        "Height": 81.4693603515625,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2250.0,
+        "Height": 79.618904113769531,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2275.0,
+        "Height": 78.6591567993164,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2300.0,
+        "Height": 78.141311645507813,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2325.0,
+        "Height": 77.1317138671875,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2350.0,
+        "Height": 74.945449829101563,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2375.0,
+        "Height": 70.841392517089844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2400.0,
+        "Height": 67.582878112792969,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2425.0,
+        "Height": 65.721969604492188,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2450.0,
+        "Height": 64.735725402832031,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2475.0,
+        "Height": 63.497470855712891,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2500.0,
+        "Height": 60.127841949462891,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2525.0,
+        "Height": 56.829032897949219,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2550.0,
+        "Height": 55.835033416748047,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2575.0,
+        "Height": 55.060165405273438,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2600.0,
+        "Height": 53.984291076660156,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2625.0,
+        "Height": 53.368568420410156,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2650.0,
+        "Height": 52.645835876464844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2675.0,
+        "Height": 52.419223785400391,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2700.0,
+        "Height": 52.207847595214844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2725.0,
+        "Height": 51.578472137451172,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2750.0,
+        "Height": 50.14593505859375,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2775.0,
+        "Height": 48.087532043457031,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2800.0,
+        "Height": 46.220706939697266,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2825.0,
+        "Height": 44.767158508300781,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2850.0,
+        "Height": 44.339088439941406,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2875.0,
+        "Height": 43.413433074951172,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2900.0,
+        "Height": 41.927291870117188,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2925.0,
+        "Height": 39.396137237548828,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2950.0,
+        "Height": 36.747264862060547,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 2975.0,
+        "Height": 35.982856750488281,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3000.0,
+        "Height": 35.770664215087891,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3025.0,
+        "Height": 35.283676147460938,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3050.0,
+        "Height": 35.271869659423828,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3075.0,
+        "Height": 35.200664520263672,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3100.0,
+        "Height": 34.767910003662109,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3125.0,
+        "Height": 33.946983337402344,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3150.0,
+        "Height": 31.903892517089844,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3175.0,
+        "Height": 29.118804931640625,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3200.0,
+        "Height": 27.341432571411133,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3225.0,
+        "Height": 26.617013931274414,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3250.0,
+        "Height": 27.027675628662109,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3275.0,
+        "Height": 26.977958679199219,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3300.0,
+        "Height": 26.443017959594727,
+        "IsVisible": false
+    },
+    {
+        "MeterDistance": 3300.454345703125,
+        "Height": 26.438728332519531,
+        "IsVisible": false
+    }
+]
