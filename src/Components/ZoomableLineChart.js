@@ -89,35 +89,50 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     //   console.log("d", d)
     // })
 
-    svgContent
+    const circles = svgContent
       .selectAll(".myDot")
-      .data(data)
-      .join("circle")
+      .data(data);
+
+    // svgContent
+    // .selectAll('text')
+    // .data(data)
+    // .enter()
+    // .append('text')    
+    // .text(function(d, i) {
+    //   return "dsadasdad";
+    // })
+    // .attr('x', function(d, i) {
+    //   console.log("d", d)
+    //   return xScale(d.MeterDistance);
+    // })
+    // .attr('y', function(d, i) {
+    //   return yScale(d.Height);
+    // })
+    
+
+    circles.join("circle")
       .attr("class", "myDot")
       .attr("stroke", "black")
       .attr("r", 4)
       .attr("fill", (value) => (value.IsVisible ? "green" : "red")) 
       .attr("cx", (value) => xScale(value.MeterDistance))
       .attr("cy", (value) => yScale(value.Height))
-      // .attr("stroke-width", 30)
-      // .attr("stroke-opacity", 0)
-      .attr("content-visibility", "auto")
+      .attr("stroke-width", 30)
+      .attr("stroke-opacity", 0)
+      // .attr("content-visibility", "hidden")
       // .attr("stroke-linejoin", "round")
 
-    const circles = svgContent
-    .selectAll(".myDot");
 
-  
     circles.on("mouseover", function (event, d) {
-      // console.log("d", d)
+      console.log("event1", event)
       tip.style("opacity", 1)
-            .html(d.Height.toFixed(2))
-            .style("left", (event.pageX-25) + "px")
-            .style("top", (event.pageY-35) + "px")
+            .html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(0) + "m")
+            .style("left", (event.pageX - 65) + "px")
+            .style("top", (event.pageY - 58) + "px")
     })
     .on("mousemove", function(event) {
-      return tip.style("left", (event.pageX-25) + "px")
-                .style("top", (event.pageY-35) + "px")
+      return tip.style("left", (event.pageX - 75) + "px")
+                .style("top", (event.pageY - 60) + "px")
     })
     .on("mouseout", function() {
       return tip.style("opacity", 0)
@@ -139,7 +154,7 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
       .attr("transform", `translate(0, ${height})`)
       .call(xAxis)
       .attr("stroke-opacity", `0.1`)
-      .attr("shape-rendering", `crispEdges`);
+      // .attr("shape-rendering", `crispEdges`);
 
     const yAxis = axisLeft(yScale)
     .ticks(10)
@@ -151,8 +166,9 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     .select(".y-axis")
     .call(yAxis)
     .attr("stroke-opacity", `0.1`)
-    .attr("shape-rendering", `crispEdges`);
+    // .attr("shape-rendering", `crispEdges`);
 
+    const testingg = selectAll(".testingg");
     // zoom
     const zoomBehavior = zoom()
       .scaleExtent([0.5, 10000]) // Min zoom level, max zoom level, 1 is default, 0.5 is smaller
@@ -166,14 +182,14 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
         // console.log("zoomstate", zoomState.k)
       });
 
-    svg.call(zoomBehavior);
+    testingg.call(zoomBehavior);
 
   }, [currentZoomState, data, data2, dataX, dimensions, maxHeight, minHeight]);
 
   return (
     <React.Fragment>
       <div className="tooltip"></div>
-      <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
+      <div className='testingg'  ref={wrapperRef} style={{ marginBottom: "2rem" }}>
         <svg ref={svgRef}>
           <defs>
             <clipPath id="myChart">

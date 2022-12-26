@@ -13,11 +13,11 @@
   border-radius: 10px;
   border: 1px solid black;
   opacity: 0; 
-  width: fit-content; 
-  height: fit-content; 
-  padding: 0.5em;
+  width: 130px; 
+  height: 40px; 
+  padding: 5px;
   font-family: 'Quicksand', sans-serif;
-  shape-rendering: crispEdges;
+  /* shape-rendering: crispEdges; */
 }
 /* base styles */
 svg {
