@@ -6,7 +6,10 @@ import {
   axisBottom,
   axisLeft,
   zoom,
-  selectAll
+  selectAll,
+  pointer,
+  least,
+  map
 } from "d3";
 import useResizeObserver from "./useResizeObserver";
 
@@ -19,7 +22,6 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
   const [currentZoomState, setCurrentZoomState] = useState();
-
   // console.log("rerender")
 
   // will be called initially and on every data change
@@ -30,7 +32,8 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     const svgContent = svg.select(".content");
     const { width, height } = { width: 600, height: 600};
       // dimensions || wrapperRef.current.getBoundingClientRect();
-    
+    const X = map(data, function(d) { return d.MeterDistance; });
+    const Y = map(data, function(d) { return d.Height; });
     // scales + line generator
     const xScale = scaleLinear()
       .domain([0, data[data.length - 1].MeterDistance])
@@ -60,6 +63,20 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
       .y((d) => yScale(d));
       // .curve(curveCardinal);
 
+    function mousemove(event) {
+      const x = xScale.invert(pointer(event)[0]);
+      const y = yScale.invert(pointer(event)[1]);
+      
+      tip.style("opacity", 1)
+        .html("<strong style='background-color: inherit;'>Height: </strong>" + x.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + y.toFixed(2) + "m")
+        .style("left", (event.pageX - 65) + "px")
+        .style("top", (event.pageY - 58) + "px");
+
+      const [xm, ym] = pointer(event);
+      const i = least(data, i => Math.hypot(xScale(X[i]) - xm, yScale(Y[i]) - ym)); // closest point
+      console.log("i", i)
+    }
+
     // render the line
     svgContent
       .selectAll(".myLine")
@@ -68,8 +85,10 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
       .attr("class", "myLine")
       .attr("stroke", "black")
       .attr("fill", "none")
-      .attr("d", lineGenerator);
-
+      .attr("d", lineGenerator)
+      .on("mousemove", mousemove)
+      .on("mouseout", () => tip.style("opacity", 0))
+      .on("mouseover", () => tip.style("opacity", 1))
 
     // Add a line that connects the first and last point
     svgContent
@@ -124,7 +143,7 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
 
 
     circles.on("mouseover", function (event, d) {
-      console.log("event1", event)
+      // console.log("event1", event)
       tip.style("opacity", 1)
             .html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(0) + "m")
             .style("left", (event.pageX - 65) + "px")
@@ -177,19 +196,36 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
         [width, height],
       ])
       .on("zoom", (event) => {
+
         const zoomState = event.transform;
         setCurrentZoomState(zoomState);
         // console.log("zoomstate", zoomState.k)
       });
 
-    testingg.call(zoomBehavior);
 
+    testingg.call(zoomBehavior);
+    
+    const dot = svg.append("g")
+      .attr("display", "none");
+
+    dot.append("circle")
+        .attr("r", 2.5);
+
+    dot.append("text")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 10)
+        .attr("text-anchor", "middle")
+        .attr("y", -8);
+
+    
   }, [currentZoomState, data, data2, dataX, dimensions, maxHeight, minHeight]);
 
   return (
     <React.Fragment>
       <div className="tooltip"></div>
+
       <div className='testingg'  ref={wrapperRef} style={{ marginBottom: "2rem" }}>
+
         <svg ref={svgRef}>
           <defs>
             <clipPath id="myChart">
