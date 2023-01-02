@@ -30,7 +30,7 @@ function App() {
     // console.log(dataX)
     return (
         <div style={{ margin: 0 }}>
-            <h2>Zoomable Line Chart with D3 </h2>
+            <h2>Testing stuff</h2>
             <ZoomableLineChart 
                 data={heightData}
                 data2={data2}
