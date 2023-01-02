@@ -145,7 +145,7 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     circles.on("mouseover", function (event, d) {
       // console.log("event1", event)
       tip.style("opacity", 1)
-            .html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(0) + "m")
+            .html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(2) + "m")
             .style("left", (event.pageX - 65) + "px")
             .style("top", (event.pageY - 58) + "px")
     })
