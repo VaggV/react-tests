@@ -147,6 +147,7 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
       tip.html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(2) + "m");
     })
     .on("mousemove", function(event) {
+      tip.transition().duration(0).style("opacity", 1);
       return tip.style("left", (event.pageX - 75) + "px")
                 .style("top", (event.pageY - 60) + "px")
     })
@@ -208,17 +209,17 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
 
     testingg.call(zoomBehavior);
     
-    const dot = svg.append("g")
-      .attr("display", "none");
+    // const dot = svg.append("g")
+    //   .attr("display", "none");
 
-    dot.append("circle")
-        .attr("r", 2.5);
+    // dot.append("circle")
+    //     .attr("r", 2.5);
 
-    dot.append("text")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
-        .attr("text-anchor", "middle")
-        .attr("y", -8);
+    // dot.append("text")
+    //     .attr("font-family", "sans-serif")
+    //     .attr("font-size", 10)
+    //     .attr("text-anchor", "middle")
+    //     .attr("y", -8);
 
     
   }, [currentZoomState, data, data2, dataX, dimensions, maxHeight, minHeight]);
