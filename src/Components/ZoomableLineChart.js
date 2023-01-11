@@ -19,6 +19,8 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
   const [currentZoomState, setCurrentZoomState] = useState();
+  const [renderCircles, setRenderCircles] = useState(true);
+  // const [showCircles, setShowCircles] = useState(true);
   // console.log("rerender")
 
   // will be called initially and on every data change
@@ -101,10 +103,58 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     // myline.on("mouseover", function (event, d) {
     //   console.log("d", d)
     // })
-
+    
     const circles = svgContent
-      .selectAll(".myDot")
-      .data(data);
+    .selectAll(".myDot")
+    .data(data);
+
+    if (renderCircles) {
+      
+    
+      circles.style("display", "none");
+
+      circles.join("circle")
+        .attr("class", "myDot")
+        .attr("stroke", "black")
+        .attr("r", 5)
+        .attr("fill", (value) => (value.IsVisible ? "green" : "red")) 
+        .attr("cx", (value) => xScale(value.MeterDistance))
+        .attr("cy", (value) => yScale(value.Height))
+        .attr("stroke-width", 30)
+        .attr("stroke-opacity", 0)
+        // .attr("content-visibility", "hidden")
+        // .attr("stroke-linejoin", "round")
+
+
+      circles.on("mouseover", function (event, d) {
+        // console.log("event1", event)
+        select(this)
+            .transition()
+            .duration(100)
+            .attr("r", 10);
+
+        tip.transition().duration(0).style("opacity", 1);
+        tip.html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(2) + "m");
+      })
+      .on("mousemove", function(event) {
+        tip.transition().duration(0).style("opacity", 1);
+        return tip.style("left", (event.pageX - 75) + "px")
+                  .style("top", (event.pageY - 60) + "px")
+      })
+      .on("mouseout", function() {
+        select(this)
+        .transition()
+        .duration(100)
+        .attr("r", 5);
+
+        return tip.transition().duration(250).style("opacity", 0)
+      })
+
+      circles.style("display", "block");
+
+      setRenderCircles(false);
+    }
+    
 
     // svgContent
     // .selectAll('text')
@@ -121,46 +171,6 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     // .attr('y', function(d, i) {
     //   return yScale(d.Height);
     // })
-    
-
-    circles.join("circle")
-      .attr("class", "myDot")
-      .attr("stroke", "black")
-      .attr("r", 5)
-      .attr("fill", (value) => (value.IsVisible ? "green" : "red")) 
-      .attr("cx", (value) => xScale(value.MeterDistance))
-      .attr("cy", (value) => yScale(value.Height))
-      .attr("stroke-width", 30)
-      .attr("stroke-opacity", 0)
-      // .attr("content-visibility", "hidden")
-      // .attr("stroke-linejoin", "round")
-
-
-    circles.on("mouseover", function (event, d) {
-      // console.log("event1", event)
-      select(this)
-          .transition()
-          .duration(100)
-          .attr("r", 10);
-
-      tip.transition().duration(0).style("opacity", 1);
-      tip.html("<strong style='background-color: inherit;'>Height: </strong>" + d.Height.toFixed(2) + "m<br /><strong style='background-color: inherit;'>Distance: </strong>" + d.MeterDistance.toFixed(2) + "m");
-    })
-    .on("mousemove", function(event) {
-      tip.transition().duration(0).style("opacity", 1);
-      return tip.style("left", (event.pageX - 75) + "px")
-                .style("top", (event.pageY - 60) + "px")
-    })
-    .on("mouseout", function() {
-      select(this)
-      .transition()
-      .duration(100)
-      .attr("r", 5);
-
-      return tip.transition().duration(250).style("opacity", 0)
-    })
-
-
 
     // axes
     const xAxis = axisBottom(xScale)
@@ -170,7 +180,7 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     // Make the first and last tick invisible
     .tickSizeOuter(0)
     // Make the space between each tick smaller
-
+  
     svg
       .select(".x-axis")
       .attr("transform", `translate(0, ${height})`)
@@ -200,11 +210,28 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
       ])
       .on("zoom", (event) => {
         tip.style("opacity", 0);
+        circles.style("display", "none");
 
         const zoomState = event.transform;
         setCurrentZoomState(zoomState);
-        // console.log("zoomstate", zoomState.k)
-      });
+
+        // if (currentZoomState && (zoomState.k === currentZoomState.k)) {
+        //   svgContent.attr("transform", `translate(${zoomState.x}, ${zoomState.y})`);
+        // } else {
+        //   // setCurrentZoomState(zoomState);
+        // }
+        // gX.call(xAxis.scale(zoomState.rescaleX(xScale)));
+        // gY.call(yAxis.scale(zoomState.rescaleY(yScale)));
+        
+      }).on("start", (event) => {
+        console.log("started zoom")
+
+      }).on("end", (event) => {
+        console.log("ended zoom")
+        
+
+        setRenderCircles(true);
+      })
 
 
     testingg.call(zoomBehavior);
@@ -222,7 +249,7 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     //     .attr("y", -8);
 
     
-  }, [currentZoomState, data, data2, dataX, dimensions, maxHeight, minHeight]);
+  }, [currentZoomState, data, data2, dataX, dimensions, maxHeight, minHeight, renderCircles]);
 
   return (
     <React.Fragment>
