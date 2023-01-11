@@ -1,7 +1,7 @@
 // import { VictoryChart, VictoryZoomContainer, VictoryScatter } from 'victory';
 import React from "react";
 import ZoomableLineChart from "./Components/ZoomableLineChart";
-import heightData from "./data/data.json";
+import heightData from "./data/data2.json";
 
 function App() {
     // const [data, setData] = useState([25, 30, 45, 60, 70, 65, 75]);
