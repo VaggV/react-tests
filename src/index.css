@@ -1,8 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-* {
-  background-color: gray;
-}
 
 .tooltip {
   position: absolute;
@@ -22,8 +19,6 @@
 /* base styles */
 /* svg {
   display: block;
-  width: 600px;
-  height: 600px;
   background: #f7f7f7;
   overflow: visible;
   text-align: center;
