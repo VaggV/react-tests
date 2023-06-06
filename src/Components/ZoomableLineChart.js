@@ -163,10 +163,9 @@ function ZoomableLineChart({ data, data2, dataX, maxHeight, minHeight, id = "myZ
     const xAxis = axisBottom(xScale)
     .ticks(((width + 2) / (height + 2)) * 10)
     .tickSize(-height)
-    .tickPadding(8)
+    .tickPadding(16)
     // Make the first and last tick invisible
     .tickSizeOuter(0)
-    // Make the space between each tick smaller
 
     svg
       .select(".x-axis")

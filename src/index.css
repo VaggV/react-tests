@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 * {
   background-color: gray;
@@ -18,9 +18,9 @@
   padding: 5px;
   font-family: 'Quicksand', sans-serif;
   /* shape-rendering: crispEdges; */
-}
+/* } */
 /* base styles */
-svg {
+/* svg {
   display: block;
   width: 600px;
   height: 600px;
@@ -40,7 +40,7 @@ svg rect.selection {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} */
 
 /* * {
   margin: 0;
