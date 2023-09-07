@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input {
+  display: flex;
+}
+
+.spinner-input {
+  width: 40px !important;
+  border: solid 1px lightgrey !important;
+  border-radius: 0 !important;
+  text-align: center !important;
+}
+
+.spinner {
+  border: solid 1px lightgrey;
+}
+
+.spinner:hover {
+  background: lightgrey;
+}
+
+.spinner:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.spinner:last-child {
+  border-radius: 0 3px 3px 0;
+}
 
 .tooltip {
   position: absolute;
